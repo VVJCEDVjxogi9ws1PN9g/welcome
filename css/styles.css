@@ -1,0 +1,94 @@
+* {
+	font-family: 'Viga', sans-serif;
+	letter-spacing: 1px;
+	/* text-transform: uppercase; */
+}
+
+.section {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+#intro {
+	letter-spacing: 2px;
+	height: 50%;
+	text-align: center;
+}
+#map {
+	width: 100%;
+	height: 50%;
+}
+
+
+.steps {}
+.steps>div {
+	/* height: 33.33vh !important; */
+	width: 90%;
+	max-width: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.steps>div>div {
+	padding: 10px;
+	height: 100%;
+	width: calc(50% - 40px);
+	float: left;
+}
+.steps>div>div:nth-child(2) {
+	float: right;
+	width: calc(50% - 10px);
+}
+.steps>div>div:first-child img {
+	width: 50%;
+}
+.steps>div>div:first-child {
+	text-align: right;
+}
+.steps>div>div:first-child>span {
+	font-size: 70px;
+	/* background-color: white; */
+	border-radius: 50px;
+}
+
+
+.m-0 { margin: 0 !important; }
+.pointer { cursor: pointer; }
+.text-center { text-align: center; }
+.center { margin: 0 auto; }
+
+
+
+.leaflet-container a {
+	color: #0a316f;
+}
+
+
+/* p {
+	color: #b0bec5;
+} */
+
+/* h3 {
+	color: white;
+} */
+
+h6 {
+	text-transform: uppercase;
+}
+
+.section.dark {
+	background-color: #0D47A1;
+}
+
+.section.light {
+	background-color: #eceff1;
+}
+.section h3 {
+	text-align: center;
+}
+.section.light h3, .section.light h6 {
+	color: #0D47A1;
+}
+
+.section.dark, .section.dark {
+	color: white;
+}

@@ -5,22 +5,17 @@ const DEFAULT_POINT = {
 
 let map, bounds;
 setTimeout(() => {
-	map = L.map('map', { zoomControl: false }).setView([DEFAULT_POINT.lat, DEFAULT_POINT.lng], 6);
+	map = L.map('map', { zoomControl: false, dragging: false }).setView([DEFAULT_POINT.lat, DEFAULT_POINT.lng], 6);
 	L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGV2YW5zaHVsaW51eCIsImEiOiJja3h1MWcybngwcWRyMm5waDlyemoyMHkzIn0.raNjTos02K9cmbKdWLuceA`, {
 		attribution: `© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>`,
 		id: 'devanshulinux/ckxviyram382z14muuytohhkp',
-		minZoom: 4,
-		maxZoom: 12,
+		minZoom: 6,
+		maxZoom: 6,
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(map);
 
 	bounds = map.getBounds();
-
-	map.on('click', async (e) => {
-		const coords = e.latlng;
-		console.log(`Clicked ${coords}`);
-	});
 
 	for (let i = 0; i < fanPoints.length; i += 2) {
 		if (!inBounds({ lat: fanPoints[i], lng: fanPoints[i + 1] })) continue
